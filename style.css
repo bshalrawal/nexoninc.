@@ -38,9 +38,9 @@
    * typography
    */
 
-  --ff-poppins: 'Poppins', sans-serif;
-  --ff-cuprum: 'Cuprum', sans-serif;
-
+  --ff-poppins: 'Inter', sans-serif; 
+  --ff-cuprum: 'DM Sans', sans-serif;
+  
   --fs-1: 4.5rem;
   --fs-2: 3.6rem;
   --fs-3: 3.5rem;
