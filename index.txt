@@ -4,7 +4,7 @@ Nexon Inc. - Smart Ideas for your Brand are Here
 
 #---------- HEADER ----------#
 
-NEXON INC
+Nexon Inc.
 
 aria-label = close menu
 
