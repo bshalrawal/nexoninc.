@@ -301,7 +301,7 @@ body {
 .logo {
   color: var(--rich-black-fogra-29-1);
   font-family: var(--ff-cuprum);
-  font-size: 40px;
+  font-size: 33px;
   font-weight: var(--fw-500);
   line-height: 1;
 }
