@@ -149,6 +149,50 @@ if (typeof desktopMedia.addEventListener === "function") {
 
 
 /**
+ * service cards reveal animation
+ */
+
+const initServiceCardObserver = function () {
+  const cards = document.querySelectorAll("[data-service-card]");
+  if (cards.length === 0) return;
+
+  const setStagger = (card, index) => {
+    card.style.setProperty("--stagger", index);
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    cards.forEach((card, index) => {
+      setStagger(card, index);
+      card.classList.add("is-revealed");
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.2,
+    }
+  );
+
+  cards.forEach((card, index) => {
+    setStagger(card, index);
+    observer.observe(card);
+  });
+};
+
+initServiceCardObserver();
+
+
+/**
  * accordion toggle
  */
 
