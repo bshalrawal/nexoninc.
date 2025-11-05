@@ -42,19 +42,22 @@
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo"><b>NEXON INC</a></b>
+      <a href="#home" class="logo">
+        <span class="logo-text">NEXON INC</span>
+      </a>
 
-      <nav class="navbar" data-navbar>
+      <nav class="navbar" id="primary-navigation" aria-label="Primary navigation" aria-hidden="true" data-navbar>
 
         <div class="wrapper">
-          <a href="#" class="logo">Nexon Inc.</a>
+          <a href="#home" class="logo">Nexon Inc.</a>
 
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <button class="nav-close-btn" type="button" aria-label="Close menu" aria-controls="primary-navigation"
+            aria-expanded="false" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
         </div>
 
-        <ul class="navbar-list">
+        <ul class="navbar-list" role="list">
 
           <li>
             <a href="#home" class="navbar-link" data-nav-link>Home</a>
@@ -73,22 +76,23 @@
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Blog</a>
+            <a href="#faq" class="navbar-link" data-nav-link>FAQ</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
         </ul>
 
       </nav>
 
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+      <button class="nav-open-btn" type="button" aria-label="Open menu" aria-controls="primary-navigation"
+        aria-expanded="false" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <a href="#" class="btn-outline">Lets talk</a>
+      <a href="#contact" class="btn btn-cta">Let's Talk</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
@@ -106,7 +110,7 @@
         - #HERO
       -->
 
-      <section class="section hero" id="home" aria-label="hero">
+      <section class="section hero" id="home" aria-label="hero" data-section>
         <div class="container">
 
           <div class="hero-content">
@@ -148,7 +152,7 @@
         - #ABOUT
       -->
 
-      <section class="section about" id="about" aria-label="about">
+      <section class="section about" id="about" aria-label="about" data-section>
         <div class="container">
 
           <figure class="about-banner">
@@ -207,132 +211,292 @@
         - #SERVICE
       -->
 
-      <section class="section service" id="services" aria-label="service">
-        <div class="container">
-
+      <section class="section service services-grid-section" id="services" aria-labelledby="services-title" data-section>
+        <div class="container services-container">
           <p class="section-subtitle text-center">-What We Offer-</p>
 
-          <h2 class="h2 section-title text-center">Our Creative Services</h2>
+          <h2 id="services-title" class="h2 section-title text-center">Our Creative Services</h2>
 
           <p class="section-text text-center">
             Get the most of reduction in your team’s operating costs for the whole product which creates amazing UI/UX
             experiences.
           </p>
 
-          <ul class="grid-list">
-
+          <ul class="grid-list services-grid" role="list">
             <li>
-              <div class="service-card has-after">
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
 
-                <figure class="card-icon">
-                  <img src="service-1.png" width="140" height="140" loading="lazy"
-                    alt="UI/UX Creative Design" class="img">
-                </figure>
+                  <figure class="card-icon">
+                    <img src="service-1.png" width="140" height="140" loading="lazy" alt="UI/UX Creative Design"
+                      class="img">
+                  </figure>
 
-                <div class="card-content">
+                  <div class="card-content">
 
-                  <h3 class="h3 card-title">UI/UX Creative Design</h3>
+                    <h3 class="h3 card-title">UI/UX Creative Design</h3>
 
-                  <p class="card-text">
-                    We design intuitive, research-backed interfaces focused on usability and conversion — from user
-                    research and wireframes to polished, high-fidelity prototypes.
-                  </p>
+                    <p class="card-text">
+                      We design intuitive, research-backed interfaces focused on usability and conversion — from user
+                      research and wireframes to polished, high-fidelity prototypes.
+                    </p>
 
-                  <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
 
                 </div>
-
-              </div>
+              </article>
             </li>
 
             <li>
-              <div class="service-card has-after">
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
 
-                <figure class="card-icon">
-                  <img src="service-2.png" width="140" height="140" loading="lazy" alt="App Development"
-                    class="img">
-                </figure>
+                  <figure class="card-icon">
+                    <img src="service-2.png" width="140" height="140" loading="lazy" alt="App Development"
+                      class="img">
+                  </figure>
 
-                <div class="card-content">
+                  <div class="card-content">
 
-                  <h3 class="h3 card-title">App Development</h3>
+                    <h3 class="h3 card-title">App Development</h3>
 
-                  <p class="card-text">
-                    We build scalable web and mobile applications using modern stacks, automated testing, and CI/CD to
-                    ensure performance, reliability, and fast iteration.
-                  </p>
+                    <p class="card-text">
+                      We build scalable web and mobile applications using modern stacks, automated testing, and CI/CD to
+                      ensure performance, reliability, and fast iteration.
+                    </p>
 
-                  <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
 
                 </div>
-
-              </div>
+              </article>
             </li>
 
             <li>
-              <div class="service-card has-after">
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
 
-                <figure class="card-icon">
-                  <img src="service-3.png" width="140" height="140" loading="lazy"
-                    alt="Professional Content Writer" class="img">
-                </figure>
+                  <figure class="card-icon">
+                    <img src="service-3.png" width="140" height="140" loading="lazy"
+                      alt="Professional Content Writer" class="img">
+                  </figure>
 
-                <div class="card-content">
+                  <div class="card-content">
 
-                  <h3 class="h3 card-title">Professional Content Writer</h3>
+                    <h3 class="h3 card-title">Professional Content Writer</h3>
 
-                  <p class="card-text">
-                    Our writers craft clear, on-brand, and SEO-friendly content — from marketing copy and blog posts to
-                    product messaging and documentation.
-                  </p>
+                    <p class="card-text">
+                      Our writers craft clear, on-brand, and SEO-friendly content — from marketing copy and blog posts to
+                      product messaging and documentation.
+                    </p>
 
-                  <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
 
                 </div>
-
-              </div>
+              </article>
             </li>
 
             <li>
-              <div class="service-card has-after">
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
 
-                <figure class="card-icon">
-                  <img src="service-4.png" width="140" height="140" loading="lazy" alt="Graphic Design"
-                    class="img">
-                </figure>
+                  <figure class="card-icon">
+                    <img src="service-4.png" width="140" height="140" loading="lazy" alt="Graphic Design"
+                      class="img">
+                  </figure>
 
-                <div class="card-content">
+                  <div class="card-content">
 
-                  <h3 class="h3 card-title">Graphic Design</h3>
+                    <h3 class="h3 card-title">Graphic Design</h3>
 
-                  <p class="card-text">
-                    We create cohesive visual identities and marketing assets — logos, illustrations, and campaign
-                    materials that strengthen your brand and engage customers.
-                  </p>
+                    <p class="card-text">
+                      We create cohesive visual identities and marketing assets — logos, illustrations, and campaign
+                      materials that strengthen your brand and engage customers.
+                    </p>
 
-                  <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
 
                 </div>
-
-              </div>
+              </article>
             </li>
 
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-1.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for SEO &amp; Analytics -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">SEO &amp; Analytics</h3>
+
+                    <p class="card-text">
+                      Research, on-page SEO, schema, dashboards, GA4 and Search Console integration to grow traffic,
+                      measure ROI, and surface meaningful KPIs.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-2.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for E-commerce Solutions -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">E-commerce Solutions</h3>
+
+                    <p class="card-text">
+                      Storefronts, payments, inventory, and optimized checkout with secure, scalable architecture
+                      tailored to your growth plans and merchandising operations.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-3.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for Cloud &amp; DevOps -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">Cloud &amp; DevOps</h3>
+
+                    <p class="card-text">
+                      CI/CD pipelines, containerization, infrastructure as code, monitoring, and high-availability
+                      deployments keep releases fast, resilient, observable, and ready to scale.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-4.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for QA &amp; Test Automation -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">QA &amp; Test Automation</h3>
+
+                    <p class="card-text">
+                      Unit, integration, and end-to-end testing with pipelines, analytics, and dashboards deliver
+                      confident releases and traceable quality signals across teams.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-1.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for Maintenance &amp; Support -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">Maintenance &amp; Support</h3>
+
+                    <p class="card-text">
+                      Proactive maintenance, performance tuning, backups, security patches, and SLA-driven support keep
+                      your products stable, compliant, and healthy after launch.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
           </ul>
 
           <a href="#" class="btn btn-primary">Get Started</a>
@@ -348,7 +512,7 @@
         - #FEATURES
       -->
 
-      <section class="section features" id="features" aria-label="features">
+      <section class="section features" id="features" aria-label="features" data-section>
         <div class="container">
 
           <p class="section-subtitle text-center">-Why Choose Us-</p>
@@ -465,7 +629,7 @@
         - #FAQ
       -->
 
-      <section class="section faq" aria-label="frequently asked questions">
+      <section class="section faq" id="faq" aria-label="frequently asked questions" data-section>
         <div class="container">
 
           <div class="title-wrapper">
@@ -619,7 +783,7 @@
 
   <footer class="footer">
 
-    <div class="footer-top section">
+    <div class="footer-top section" id="contact" data-section>
       <div class="container">
 
         <div class="footer-brand">
@@ -722,7 +886,7 @@
           <li class="footer-item">
             <ion-icon name="call" aria-hidden="true"></ion-icon>
 
-            <a href="tel:+7894631546876" class="contact-link">+XXXXXXXXX</a>
+            <a href="tel:+9779763607255" class="contact-link">+977 9763607255</a>
           </li>
 
           <li class="footer-item">
